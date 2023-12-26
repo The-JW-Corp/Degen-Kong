@@ -1,8 +1,9 @@
 .button_container {
   position: relative;
-  margin-top: 20px;
+  margin-top: 40px;
+  margin-left: 50px;
 }
-.button_container .button_text {
+.button_text {
   position: absolute;
   width: 124.97px;
   height: 46.06px;
@@ -18,8 +19,21 @@
   /* opacity: 0; */
   animation: slideLeft ease-out 0.5s;
   /* animation-delay: 500ms; */
+  text-transform: uppercase;
 }
-
+.button_superior_hand {
+  position: absolute;
+  top: -18px;
+  width: 124.97px;
+  z-index: 3;
+}
+.button_inferior_hand {
+  position: absolute;
+  bottom: -9px;
+  right: 45px;
+  /* width: 124.97px; */
+  z-index: 3;
+}
 @keyframes slideLeft {
   0% {
     opacity: 0;
