@@ -15,4 +15,22 @@
   font-size: 19.55px;
   color: var(--Brown);
   text-decoration: underline;
+  /* opacity: 0; */
+  animation: slideLeft ease-out 0.5s;
+  /* animation-delay: 500ms; */
+}
+
+@keyframes slideLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  80% {
+    opacity: 1;
+    transform: translateX(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
 }
