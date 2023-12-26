@@ -1,4 +1,18 @@
-.button_container svg{
-    /* background-color: red; */
-    cursor: pointer;
+.button_container {
+  position: relative;
+  margin-top: 20px;
+}
+.button_container .button_text {
+  position: absolute;
+  width: 124.97px;
+  height: 46.06px;
+  /* background-color: red; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  font-family: "modak";
+  font-size: 19.55px;
+  color: var(--Brown);
+  text-decoration: underline;
 }

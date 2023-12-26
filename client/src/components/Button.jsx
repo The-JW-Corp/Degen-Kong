@@ -20,7 +20,7 @@ function Button() {
 
   return (
     <button className={styles.button_container} onClick={handleClickButton}>
-      Button
+      <div className={styles.button_text}>Button</div>
       {/* <img src={imaged} alt="" /> */}
       <Player
         autoplay
