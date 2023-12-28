@@ -4,9 +4,10 @@ import styles from "../../styles/page-rarity.module.css";
 async function page() {
   return (
     <div className={styles.page_container}>
-      <Button text="home" />
+      Rarity
+      {/* <Button text="home" />
       <Button text="stake" />
-      <Button text="rarity" isSelected={true} />
+      <Button text="rarity" isSelected={true} /> */}
     </div>
   );
 }
