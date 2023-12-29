@@ -3,10 +3,12 @@ import React, { useState, useRef } from "react";
 import styles from "../styles/button.module.css";
 import { Player, Controls } from "@lottiefiles/react-lottie-player";
 import Link from "next/link";
+// import { usePathname } from "next/navigation";
 
-function Button({ text, isSelected }) {
+function Button({ text, isSelected, onClick }) {
   const [showNextButton, setShowNextButton] = useState(false);
   const playerRef = useRef(null);
+  // const pathname = usePathname();
   const buttonAnimationURL =
     "https://lottie.host/d8cee625-f798-4df1-8582-f29be98c468b/gxwZrVrtQB.json";
   const buttonSuperiorHandURL =
@@ -14,7 +16,8 @@ function Button({ text, isSelected }) {
   const buttonInferiorHandURL =
     "https://lottie.host/52050add-59bc-4241-a702-5509d780ea80/DVKC0R61un.json";
   function handleClickButton() {
-    if (playerRef.current) {
+    onClick();
+    if (isSelected && playerRef.current) {
       playerRef.current.setSeeker(0); // Set the frame to the start
       playerRef.current.play();
     }
@@ -26,7 +29,11 @@ function Button({ text, isSelected }) {
   }
   return (
     <Link href={text}>
-      <button className={styles.button_container} onClick={handleClickButton}>
+      <button
+        // handleClick={onClick}
+        className={styles.button_container}
+        onClick={handleClickButton}
+      >
         <div
           className={styles.button_text}
           style={{ display: showNextButton ? "flex" : "none" }}

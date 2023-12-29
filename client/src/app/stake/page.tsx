@@ -1,11 +1,17 @@
-import React from 'react'
-
+import React from "react";
+import Image from "next/image";
+import degenKongWatermark from "../../../public/Assets/image/degenkong-watermark.svg";
 function page() {
   return (
     <>
-Stake    
+      Stake
+      <Image
+        src={degenKongWatermark}
+        quality={100}
+        alt="degen kong long background"
+      />
     </>
-  )
+  );
 }
 
-export default page
+export default page;
