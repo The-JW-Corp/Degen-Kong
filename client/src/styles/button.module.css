@@ -50,6 +50,12 @@
   /* width: 124.97px; */
   z-index: 3;
 }
+.button_mouth_kong{
+    position: absolute;
+  top: -35px;
+  width: 144.97px;
+  z-index: 3;
+}
 @keyframes slideLeft {
   0% {
     opacity: 0;

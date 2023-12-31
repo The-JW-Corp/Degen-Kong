@@ -4,9 +4,12 @@ import Button from "./Button.jsx";
 import styles from "../styles/navbar.module.css";
 import degenKongLogo from "../../public/Assets/image/degen-kong-logo.svg";
 import Image from "next/image.js";
+import { usePathname } from "next/navigation";
 function Navbar() {
   const [activeButton, setActiveButton] = useState(null);
   const paths = ["home", "stake", "roadmap", "rarity", "connect wallet"];
+  const pathname = usePathname();
+  let pathnameString = pathname.replace("/", "");
   const handleButtonClick = (path) => {
     setActiveButton(path);
   };
@@ -17,7 +20,7 @@ function Navbar() {
         <Button
           key={i}
           text={path}
-          isSelected={path === activeButton}
+          isSelected={path === pathnameString}
           onClick={() => handleButtonClick(path)}
         />
       ))}
