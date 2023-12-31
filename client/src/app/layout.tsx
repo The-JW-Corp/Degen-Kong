@@ -26,6 +26,7 @@ export default function RootLayout({
           </div>
           {children}
         </div>
+        <div className="page_error_size">Go on a bigger screen.</div>
       </body>
     </html>
   );

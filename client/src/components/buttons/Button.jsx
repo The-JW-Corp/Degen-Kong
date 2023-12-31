@@ -43,7 +43,7 @@ function Button({ text, isSelected, onClick, isWalletConnected }) {
           }
           style={{ display: showNextButton ? "flex" : "none" }}
         >
-          {text}
+          {text === "connect wallet" && isWalletConnected ? "7DXaA...CcY"  : text}
         </div>
         {isSelected && (
           <>
