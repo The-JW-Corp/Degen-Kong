@@ -1,0 +1,40 @@
+.button_socials_container {
+  cursor: pointer;
+  position: relative;
+  width: 41.72px;
+  height: 48.46px;
+  margin-bottom: 20px;
+}
+.button_socials_container:hover {
+  transition-duration: 300ms;
+  opacity: 0.7;
+}
+.button_socials_logo {
+  z-index: 3;
+  /* width: 32.72px; */
+  /* height: 37.46px; */
+  position: absolute;
+  top: 20%;
+  left: 15%;
+  /* background-color: red; */
+  user-select: none;
+  /* animation: rotate 0.5s ease-out; */
+}
+.button_socials_logo img {
+  width: 22px;
+  height: 22px;
+}
+.rotate {
+  animation: rotate 0.3s ease-out;
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  80% {
+    transform: rotate(440deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

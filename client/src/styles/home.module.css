@@ -6,3 +6,6 @@
   flex-direction: column;
   height: calc(100vh - 155px);
 }
+.page_container img {
+  user-select: none;
+}

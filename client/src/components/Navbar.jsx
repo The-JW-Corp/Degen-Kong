@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import Button from "./Button.jsx";
+import Button from "./buttons/Button.jsx";
 import styles from "../styles/navbar.module.css";
 import degenKongLogo from "../../public/Assets/image/degen-kong-logo.svg";
 import Image from "next/image.js";

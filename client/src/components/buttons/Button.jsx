@@ -1,10 +1,11 @@
 "use client";
 import React, { useState, useRef, useEffect } from "react";
-import styles from "../styles/button.module.css";
-import { Player, Controls } from "@lottiefiles/react-lottie-player";
+import styles from "../../styles/button.module.css";
 import Link from "next/link";
-import KongHand from "../components/lottie/KongHand";
-import KongMouth from "../components/lottie/KongMouth";
+import KongHand from "../lottie/KongHand";
+import KongMouth from "../lottie/KongMouth";
+import ButtonAnimation from "../../components/lottie/ButtonAnimation";
+import {handleAnimationComplete as handleAnimationCompleteUtil } from "../../utils/lottieAnimationComplete"
 function Button({ text, isSelected, onClick, isWalletConnected }) {
   const [showNextButton, setShowNextButton] = useState(false);
   const [displayConnectWalletButton, setDisplayConnectWalletButton] =
@@ -20,11 +21,8 @@ function Button({ text, isSelected, onClick, isWalletConnected }) {
       playerRef.current.play();
     }
   }
-  function handleAnimationComplete(e) {
-    if (e === "complete") {
-      setShowNextButton(true);
-    }
-  }
+  
+  const handleAnimationComplete = handleAnimationCompleteUtil(setShowNextButton);
   useEffect(() => {
     if (text === "connect wallet") {
       setDisplayConnectWalletButton(true);
@@ -63,26 +61,12 @@ function Button({ text, isSelected, onClick, isWalletConnected }) {
             <KongHand isWalletConnected={isWalletConnected} />
           </>
         )}
-        <Player
-          autoplay
-          // hover
-          ref={playerRef}
-          onClick
-          keepLastFrame
-          src={buttonAnimationURL}
-          onEvent={handleAnimationComplete}
-          style={
-            displayConnectWalletButton
-              ? { height: "69.764px", width: "170.196px" }
-              : { height: "58.179px", width: "145.056px" }
-          }
-          speed={1.5}
-        >
-          <Controls
-            visible={false}
-            buttons={["play", "repeat", "frame", "debug"]}
-          />
-        </Player>
+        <ButtonAnimation
+          playerRef={playerRef}
+          buttonAnimationURL={buttonAnimationURL}
+          handleAnimationComplete={handleAnimationComplete}
+          displayConnectWalletButton={displayConnectWalletButton}
+        />
       </button>
     </Link>
   );
