@@ -27,7 +27,7 @@ function Button({ text, isSelected, onClick, isWalletConnected }) {
     if (text === "connect wallet") {
       setDisplayConnectWalletButton(true);
     }
-  }, []);
+  }, [text]);
   return (
     <Link href={displayConnectWalletButton ? "" : text}>
       <button
