@@ -1,4 +1,59 @@
-.button_container svg{
-    /* background-color: red; */
-    cursor: pointer;
+.button_container {
+  position: relative;
+  /* margin-top: 40px; */
+  /* margin-left: 50px; */
+  user-select: none;
+}
+.button_text {
+  position: absolute;
+  width: 124.97px;
+  height: 46.06px;
+  /* background-color: red; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  font-family: "modak";
+  font-size: 19.55px;
+  color: var(--Brown);
+  text-decoration: underline;
+  /* opacity: 0; */
+  animation: slideLeft ease-out 0.5s;
+  /* animation-delay: 500ms; */
+  text-transform: uppercase;
+}
+.button_text_connect_wallet {
+  position: absolute;
+  width: 144.38843px;
+  height: 54.81818px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  font-family: "modak";
+  font-size: 17.036px;
+  color: var(--Brown);
+  animation: slideLeft ease-out 0.5s;
+  text-transform: uppercase;
+  /* background-color: red; */
+}
+.button_mouth_kong {
+  position: absolute;
+  top: -35px;
+  width: 144.97px;
+  z-index: 3;
+}
+@keyframes slideLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  80% {
+    opacity: 1;
+    transform: translateX(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
 }

@@ -1,0 +1,19 @@
+.navbar_container {
+  width: 100%;
+  height: 155px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.navbar_wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1352px;
+  width: 100%;
+}
+.navbar_buttons_navigate_container {
+  width: 767px;
+  display: flex;
+  justify-content: space-between;
+}

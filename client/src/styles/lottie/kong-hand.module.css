@@ -1,0 +1,26 @@
+.kong_hand_superior {
+  position: absolute;
+  top: -18px;
+  width: 124.97px;
+  z-index: 3;
+}
+.kong_hand_inferior {
+  position: absolute;
+  bottom: -9px;
+  right: 45px;
+  /* width: 124.97px; */
+  z-index: 3;
+} 
+.kong_hand_superior_wallet_connected {
+  position: absolute;
+  top: -21px;
+  width: 144.97px;
+  z-index: 3;
+}
+.kong_hand_inferior_wallet_connected {
+  position: absolute;
+  bottom: -10px;
+  right: 50px;
+  /* width: 124.97px; */
+  z-index: 3;
+}
