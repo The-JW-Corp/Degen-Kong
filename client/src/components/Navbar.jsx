@@ -1,16 +1,18 @@
 "use client";
 import React, { useState } from "react";
 import Button from "./Button.jsx";
-import { usePathname } from "next/navigation";
-
+import styles from "../styles/navbar.module.css";
+import degenKongLogo from "../../public/Assets/image/degen-kong-logo.svg";
+import Image from "next/image.js";
 function Navbar() {
   const [activeButton, setActiveButton] = useState(null);
-  const paths = ["home", "stake", "roadmap", "rarity"];
+  const paths = ["home", "stake", "roadmap", "rarity", "connect wallet"];
   const handleButtonClick = (path) => {
     setActiveButton(path);
   };
   return (
-    <div className="">
+    <div className={styles.navbar_container}>
+      <Image src={degenKongLogo} quality={100} alt="degen kong logo" />
       {paths.map((path, i) => (
         <Button
           key={i}

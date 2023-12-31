@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import styles from "../styles/button.module.css";
 import { Player, Controls } from "@lottiefiles/react-lottie-player";
 import Link from "next/link";
@@ -7,6 +7,8 @@ import Link from "next/link";
 
 function Button({ text, isSelected, onClick }) {
   const [showNextButton, setShowNextButton] = useState(false);
+  const [displayConnectWalletButton, setDisplayConnectWalletButton] =
+    useState(false);
   const playerRef = useRef(null);
   // const pathname = usePathname();
   const buttonAnimationURL =
@@ -27,6 +29,11 @@ function Button({ text, isSelected, onClick }) {
       setShowNextButton(true);
     }
   }
+  useEffect(() => {
+    if (text === "connect wallet") {
+      setDisplayConnectWalletButton(true);
+    }
+  }, []);
   return (
     <Link href={text}>
       <button
@@ -35,7 +42,11 @@ function Button({ text, isSelected, onClick }) {
         onClick={handleClickButton}
       >
         <div
-          className={styles.button_text}
+          className={
+            displayConnectWalletButton
+              ? styles.button_text_connect_wallet
+              : styles.button_text
+          }
           style={{ display: showNextButton ? "flex" : "none" }}
         >
           {text}
@@ -88,7 +99,11 @@ function Button({ text, isSelected, onClick }) {
           keepLastFrame
           src={buttonAnimationURL}
           onEvent={handleAnimationComplete}
-          style={{ height: "58.179px", width: "145.056px" }}
+          style={
+            displayConnectWalletButton
+              ? { height: "69.764px", width: "170.196px" }
+              : { height: "58.179px", width: "145.056px" }
+          }
           speed={1.5}
         >
           <Controls

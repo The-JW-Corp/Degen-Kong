@@ -2,6 +2,7 @@
   position: relative;
   margin-top: 40px;
   margin-left: 50px;
+  user-select: none;
 }
 .button_text {
   position: absolute;
@@ -20,6 +21,21 @@
   animation: slideLeft ease-out 0.5s;
   /* animation-delay: 500ms; */
   text-transform: uppercase;
+}
+.button_text_connect_wallet{
+    position: absolute;
+    width: 144.38843px;
+    height: 54.81818px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    font-family: "modak";
+    font-size: 17.036px;
+    color: var(--Brown);
+    animation: slideLeft ease-out 0.5s;
+    text-transform: uppercase;
+    /* background-color: red; */
 }
 .button_superior_hand {
   position: absolute;
