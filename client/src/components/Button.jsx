@@ -3,8 +3,9 @@ import React, { useState, useRef, useEffect } from "react";
 import styles from "../styles/button.module.css";
 import { Player, Controls } from "@lottiefiles/react-lottie-player";
 import Link from "next/link";
-
-function Button({ text, isSelected, onClick }) {
+import KongHand from "../components/lottie/KongHand";
+import KongMouth from "../components/lottie/KongMouth";
+function Button({ text, isSelected, onClick, isWalletConnected }) {
   const [showNextButton, setShowNextButton] = useState(false);
   const [displayConnectWalletButton, setDisplayConnectWalletButton] =
     useState(false);
@@ -12,10 +13,6 @@ function Button({ text, isSelected, onClick }) {
   // const pathname = usePathname();
   const buttonAnimationURL =
     "https://lottie.host/d8cee625-f798-4df1-8582-f29be98c468b/gxwZrVrtQB.json";
-  const buttonSuperiorHandURL =
-    "https://lottie.host/f6468161-88cb-49c5-9865-b4ea43ad2e93/qDQIVRiM7o.json";
-  const buttonInferiorHandURL =
-    "https://lottie.host/52050add-59bc-4241-a702-5509d780ea80/DVKC0R61un.json";
   const mouthKongURL =
     "https://lottie.host/10b35cf8-df27-4904-a0b6-7f28ea5ba4f5/ALRDNyO0QH.json";
   function handleClickButton() {
@@ -54,64 +51,13 @@ function Button({ text, isSelected, onClick }) {
         </div>
         {isSelected && (
           <>
-            <div className={styles.button_superior_hand}>
-              <Player
-                autoplay
-                // hover
-                ref={playerRef}
-                onClick
-                keepLastFrame
-                src={buttonSuperiorHandURL}
-                // onEvent={handleAnimationComplete}
-                style={{ height: "23.000692px", width: "79.48137px" }}
-                speed={1.5}
-              >
-                <Controls
-                  visible={false}
-                  buttons={["play", "repeat", "frame", "debug"]}
-                />
-              </Player>
-            </div>
-            <div className={styles.button_inferior_hand}>
-              <Player
-                autoplay
-                // hover
-                ref={playerRef}
-                onClick
-                keepLastFrame
-                src={buttonInferiorHandURL}
-                // onEvent={handleAnimationComplete}
-                style={{ height: "17.514px", width: "38.498px" }}
-                speed={1.5}
-              >
-                <Controls
-                  visible={false}
-                  buttons={["play", "repeat", "frame", "debug"]}
-                />
-              </Player>
-            </div>
+            <KongHand />
           </>
         )}
-        {displayConnectWalletButton && (
+        {/* If connect wallet button and the wallet is not connected show the kong mouth */}
+        {displayConnectWalletButton && isWalletConnected && (
           <>
-            <div className={styles.button_mouth_kong}>
-              <Player
-                autoplay
-                // hover
-                ref={playerRef}
-                onClick
-                keepLastFrame
-                src={mouthKongURL}
-                // onEvent={handleAnimationComplete}
-                style={{ height: "133px", width: "135px" }}
-                speed={1.5}
-              >
-                <Controls
-                  visible={false}
-                  buttons={["play", "repeat", "frame", "debug"]}
-                />
-              </Player>
-            </div>
+            <KongMouth />
           </>
         )}
         <Player

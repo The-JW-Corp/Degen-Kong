@@ -1,0 +1,13 @@
+.kong_hand_superior {
+  position: absolute;
+  top: -18px;
+  width: 124.97px;
+  z-index: 3;
+}
+.kong_hand_inferior {
+  position: absolute;
+  bottom: -9px;
+  right: 45px;
+  /* width: 124.97px; */
+  z-index: 3;
+}

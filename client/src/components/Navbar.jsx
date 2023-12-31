@@ -7,6 +7,7 @@ import Image from "next/image.js";
 import { usePathname } from "next/navigation";
 function Navbar() {
   const [activeButton, setActiveButton] = useState(null);
+  const [isWalletConnected, setIsWalletConnected] = useState(true);
   const paths = ["home", "stake", "roadmap", "rarity", "connect wallet"];
   const pathname = usePathname();
   let pathnameString = pathname.replace("/", "");
@@ -20,6 +21,7 @@ function Navbar() {
         <Button
           key={i}
           text={path}
+          isWalletConnected={isWalletConnected}
           isSelected={path === pathnameString}
           onClick={() => handleButtonClick(path)}
         />

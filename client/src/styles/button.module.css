@@ -22,36 +22,23 @@
   /* animation-delay: 500ms; */
   text-transform: uppercase;
 }
-.button_text_connect_wallet{
-    position: absolute;
-    width: 144.38843px;
-    height: 54.81818px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 2;
-    font-family: "modak";
-    font-size: 17.036px;
-    color: var(--Brown);
-    animation: slideLeft ease-out 0.5s;
-    text-transform: uppercase;
-    /* background-color: red; */
-}
-.button_superior_hand {
+.button_text_connect_wallet {
   position: absolute;
-  top: -18px;
-  width: 124.97px;
-  z-index: 3;
+  width: 144.38843px;
+  height: 54.81818px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  font-family: "modak";
+  font-size: 17.036px;
+  color: var(--Brown);
+  animation: slideLeft ease-out 0.5s;
+  text-transform: uppercase;
+  /* background-color: red; */
 }
-.button_inferior_hand {
+.button_mouth_kong {
   position: absolute;
-  bottom: -9px;
-  right: 45px;
-  /* width: 124.97px; */
-  z-index: 3;
-}
-.button_mouth_kong{
-    position: absolute;
   top: -35px;
   width: 144.97px;
   z-index: 3;
