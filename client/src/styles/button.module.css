@@ -1,7 +1,7 @@
 .button_container {
   position: relative;
-  margin-top: 40px;
-  margin-left: 50px;
+  /* margin-top: 40px; */
+  /* margin-left: 50px; */
   user-select: none;
 }
 .button_text {
