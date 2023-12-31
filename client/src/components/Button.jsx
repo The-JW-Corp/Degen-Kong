@@ -13,8 +13,6 @@ function Button({ text, isSelected, onClick, isWalletConnected }) {
   // const pathname = usePathname();
   const buttonAnimationURL =
     "https://lottie.host/d8cee625-f798-4df1-8582-f29be98c468b/gxwZrVrtQB.json";
-  const mouthKongURL =
-    "https://lottie.host/10b35cf8-df27-4904-a0b6-7f28ea5ba4f5/ALRDNyO0QH.json";
   function handleClickButton() {
     onClick();
     if (isSelected && playerRef.current) {
@@ -55,9 +53,14 @@ function Button({ text, isSelected, onClick, isWalletConnected }) {
           </>
         )}
         {/* If connect wallet button and the wallet is not connected show the kong mouth */}
-        {displayConnectWalletButton && isWalletConnected && (
+        {displayConnectWalletButton && !isWalletConnected && (
           <>
             <KongMouth />
+          </>
+        )}
+        {displayConnectWalletButton && isWalletConnected && (
+          <>
+            <KongHand isWalletConnected={isWalletConnected} />
           </>
         )}
         <Player

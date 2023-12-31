@@ -8,22 +8,29 @@ import { usePathname } from "next/navigation";
 function Navbar() {
   const [activeButton, setActiveButton] = useState(null);
   const [isWalletConnected, setIsWalletConnected] = useState(true);
-  const paths = ["home", "stake", "roadmap", "rarity", "connect wallet"];
+  const buttonsName = ["home", "stake", "roadmap", "rarity", "connect wallet"];
   const pathname = usePathname();
   let pathnameString = pathname.replace("/", "");
-  const handleButtonClick = (path) => {
-    setActiveButton(path);
+  function handleConnectWalletClick(buttonName) {
+    if (buttonName === "connect wallet") {
+      setIsWalletConnected(!isWalletConnected);
+      console.log("connect wallet clicked")
+    }
+  }
+  const handleButtonClick = (buttonName) => {
+    setActiveButton(buttonName);
+    handleConnectWalletClick(buttonName);
   };
   return (
     <div className={styles.navbar_container}>
       <Image src={degenKongLogo} quality={100} alt="degen kong logo" />
-      {paths.map((path, i) => (
+      {buttonsName.map((buttonName, i) => (
         <Button
           key={i}
-          text={path}
+          text={buttonName}
           isWalletConnected={isWalletConnected}
-          isSelected={path === pathnameString}
-          onClick={() => handleButtonClick(path)}
+          isSelected={buttonName === pathnameString}
+          onClick={() => handleButtonClick(buttonName)}
         />
       ))}
     </div>
