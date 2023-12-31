@@ -1,4 +1,3 @@
-import Button from "@/components/Button.jsx";
 import React from "react";
 import styles from "../../styles/page-rarity.module.css";
 async function page() {
