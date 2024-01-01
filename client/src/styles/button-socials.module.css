@@ -12,14 +12,10 @@
 }
 .button_socials_logo {
   z-index: 3;
-  /* width: 32.72px; */
-  /* height: 37.46px; */
   position: absolute;
   top: 20%;
   left: 15%;
-  /* background-color: red; */
   user-select: none;
-  /* animation: rotate 0.5s ease-out; */
 }
 .button_socials_logo img {
   width: 22px;

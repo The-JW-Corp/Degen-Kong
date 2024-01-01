@@ -2,6 +2,10 @@
   font-family: "modak";
   src: url("../../public/Assets/fonts/Modak-Regular.ttf") format("truetype");
 }
+@font-face {
+  font-family: "mochiy-pop-one";
+  src: url("../../public/Assets/fonts/MochiyPopOne-Regular.ttf") format("truetype");
+}
 :root {
   --Brown: #5b2b13;
 }
