@@ -1,0 +1,29 @@
+.button_medium_container {
+  position: relative;
+  width: fit-content;
+  height: fit-content;
+  cursor: pointer;
+}
+.button_medium_container:hover {
+  opacity: 0.7;
+  transition-duration: 300ms;
+}
+.button_medium_container img {
+  stroke: black;
+  fill: black;
+}
+.button_medium_text {
+  color: white;
+  position: absolute;
+  z-index: 12;
+  font-size: 9px;
+  top: 0px;
+  font-family: "mochiy-pop-one";
+  width: 81px;
+  height: 31px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  user-select: none;
+}
