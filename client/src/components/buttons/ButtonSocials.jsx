@@ -60,7 +60,7 @@ function ButtonSocials() {
   return (
     <>
       {socialMedia.map((social, i) => (
-        <Link href={handleSocialsLinks(social)}>
+        <Link className={styles.button_socials_section} href={handleSocialsLinks(social)}>
           <div
             key={social.name}
             className={styles.button_socials_container}

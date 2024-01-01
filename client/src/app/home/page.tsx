@@ -1,7 +1,7 @@
 import Image from "next/image";
 import WatermarkTitle from "../../../public/Assets/image/degen-kong-watermark-title.svg";
 import degenKongLogo from "../../../public/Assets/image/degen-kong-logo.svg"
-import styles from "../../styles/home.module.css";
+import styles from "../../styles/pages/page-home.module.css";
 export default function Home() {
   return (
     <>

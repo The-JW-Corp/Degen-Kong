@@ -1,9 +1,10 @@
+
 .button_socials_container {
-  cursor: pointer;
   position: relative;
   width: 41.72px;
   height: 48.46px;
   margin-bottom: 20px;
+  z-index: 12;
 }
 .button_socials_container:hover {
   transition-duration: 300ms;
