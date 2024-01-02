@@ -2,9 +2,13 @@ import React from "react";
 import Image from "next/image";
 import degenKongWatermark from "../../../public/Assets/image/degenkong-watermark.svg";
 import styles from "../../styles/pages/page-stake.module.css";
-import degenPfp from "../../../public/Assets/image/degenKong-pfp.png";
+import nftImage from "../../../public/Assets/image/degenKong-pfp.png";
 import ButtonMedium from "../../components/buttons/ButtonMedium";
+import Nft from "../../components/Nft";
 function page() {
+  // Fake data but need to fetch nft Meta data and ID from blockchain
+  const nftsFromWallet = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+  const nftsStaked = [0, 1, 2, 3, 4];
   return (
     <>
       <div className={styles.stake_page_container}>
@@ -21,27 +25,7 @@ function page() {
           </div>
           <div className={styles.stake_page_first_bloc}>
             <div className={styles.stake_page_first_bloc_wrap}>
-              <div className={styles.stake_page_image_container}>
-                <Image
-                  src={degenPfp}
-                  quality={100}
-                  alt="degen kong long background"
-                />
-              </div>
-              <div className={styles.stake_page_image_container}>
-                <Image
-                  src={degenPfp}
-                  quality={100}
-                  alt="degen kong long background"
-                />
-              </div>
-              <div className={styles.stake_page_image_container}>
-                <Image
-                  src={degenPfp}
-                  quality={100}
-                  alt="degen kong long background"
-                />
-              </div>
+              <Nft nfts={nftsFromWallet} nftImage={nftImage} />
             </div>
           </div>
           <div
@@ -60,114 +44,12 @@ function page() {
           </div>
           <div className={styles.stake_page_second_bloc}>
             <div className={styles.stake_page_second_bloc_wrap}>
-              <div className={styles.stake_page_image_container}>
-                <Image
-                  src={degenPfp}
-                  quality={100}
-                  alt="degen kong long background"
-                />
-              </div>
-              <div className={styles.stake_page_image_container}>
-                <Image
-                  src={degenPfp}
-                  quality={100}
-                  alt="degen kong long background"
-                />
-              </div>
-              <div className={styles.stake_page_image_container}>
-                <Image
-                  src={degenPfp}
-                  quality={100}
-                  alt="degen kong long background"
-                />
-              </div>
-              <div className={styles.stake_page_image_container}>
-                <Image
-                  src={degenPfp}
-                  quality={100}
-                  alt="degen kong long background"
-                />
-              </div>
-              <div className={styles.stake_page_image_container}>
-                <Image
-                  src={degenPfp}
-                  quality={100}
-                  alt="degen kong long background"
-                />
-              </div>
-              <div className={styles.stake_page_image_container}>
-                <Image
-                  src={degenPfp}
-                  quality={100}
-                  alt="degen kong long background"
-                />
-              </div>
-              <div className={styles.stake_page_image_container}>
-                <Image
-                  src={degenPfp}
-                  quality={100}
-                  alt="degen kong long background"
-                />
-              </div>
-              <div className={styles.stake_page_image_container}>
-                <Image
-                  src={degenPfp}
-                  quality={100}
-                  alt="degen kong long background"
-                />
-              </div>
-              <div className={styles.stake_page_image_container}>
-                <Image
-                  src={degenPfp}
-                  quality={100}
-                  alt="degen kong long background"
-                />
-              </div>
-              <div className={styles.stake_page_image_container}>
-                <Image
-                  src={degenPfp}
-                  quality={100}
-                  alt="degen kong long background"
-                />
-              </div>
-              <div className={styles.stake_page_image_container}>
-                <Image
-                  src={degenPfp}
-                  quality={100}
-                  alt="degen kong long background"
-                />
-              </div>
-              <div className={styles.stake_page_image_container}>
-                <Image
-                  src={degenPfp}
-                  quality={100}
-                  alt="degen kong long background"
-                />
-              </div>
-              <div className={styles.stake_page_image_container}>
-                <Image
-                  src={degenPfp}
-                  quality={100}
-                  alt="degen kong long background"
-                />
-              </div>
-              <div className={styles.stake_page_image_container}>
-                <Image
-                  src={degenPfp}
-                  quality={100}
-                  alt="degen kong long background"
-                />
-              </div>
-              <div className={styles.stake_page_image_container}>
-                <Image
-                  src={degenPfp}
-                  quality={100}
-                  alt="degen kong long background"
-                />
-              </div>
+              <Nft nfts={nftsStaked} nftImage={nftImage} />
             </div>
           </div>
-          <div className={styles.stake_page_second_bloc_bottom_buttons_container}>
+          <div
+            className={styles.stake_page_second_bloc_bottom_buttons_container}
+          >
             <ButtonMedium text="SELECT ALL (0)" />
             <ButtonMedium text="UNSTAKE(0)" />
           </div>
