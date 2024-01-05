@@ -3,11 +3,8 @@ import React, { useState } from "react";
 import styles from "../styles/nft.module.css";
 import Image from "next/image";
 function Nft({ nfts, nftImage }) {
-  const [selectedNftIndex, setSelectedNftIndex] = useState(null);
   const [selectedNfts, setSelectedNfts] = useState(new Set());
-  function handleNftClick(index) {
-    setSelectedNftIndex(index);
-  }
+
   function handleNftClick(index) {
     setSelectedNfts((prevSelectedNfts) => {
       const newSelectedNfts = new Set(prevSelectedNfts);
@@ -18,7 +15,9 @@ function Nft({ nfts, nftImage }) {
       }
       return newSelectedNfts;
     });
+    console.log(selectedNfts.size)
   }
+  
   return (
     <>
       {nfts.map((index) => (

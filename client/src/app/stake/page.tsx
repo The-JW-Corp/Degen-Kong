@@ -3,7 +3,7 @@ import Image from "next/image";
 import degenKongWatermark from "../../../public/Assets/image/degenkong-watermark.svg";
 import styles from "../../styles/pages/page-stake.module.css";
 import nftImage from "../../../public/Assets/image/degenKong-pfp.png";
-import ButtonMedium from "../../components/buttons/ButtonMedium";
+import ButtonMedium from "../../components/buttons/ButtonMedium.tsx";
 import Nft from "../../components/Nft";
 function page() {
   // Fake data but need to fetch nft Meta data and ID from blockchain
