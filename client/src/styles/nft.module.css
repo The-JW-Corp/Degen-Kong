@@ -1,0 +1,29 @@
+.nft_image_container {
+  width: 152px;
+  height: 152px;
+  border: solid 2px #dd9c4b;
+  border-radius: 12px;
+  cursor: pointer;
+  user-select: none;
+}
+.nft_image_container img {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 10px;
+}
+/* -- Conditionnal rendering -- */
+.nft_image_container_selected {
+  cursor: pointer;
+  width: 152px;
+  height: 152px;
+  border: solid 6px #dd9c4b;
+  border-radius: 12px;
+  transition-duration: 100ms;
+  user-select: none;
+}
+.nft_image_container_selected img {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 10px;
+  user-select: none;
+}
