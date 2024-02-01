@@ -2,7 +2,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import styles from "../../styles/button.module.css";
 import Link from "next/link";
-import KongHand from "../lottie/KongHand";
+import KongHand from "../lottie/KongHand.tsx";
 import KongMouth from "../lottie/KongMouth";
 import ButtonAnimation from "../../components/lottie/ButtonAnimation";
 import {handleAnimationComplete as handleAnimationCompleteUtil } from "../../utils/lottieAnimationComplete"
