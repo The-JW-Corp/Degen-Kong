@@ -8,7 +8,8 @@ skip-lint = false
 anchor = "F1ipperKF9EfD821ZbbYjS319LXYiBmjhzkkf5a26rC"
 
 [registry]
-url = "https://api.apr.dev"
+# url = "https://api.apr.dev"
+url = "https://solana-devnet.g.alchemy.com/v2/IlbN1019P3ZyeBO0RYoRVdTN__tH223L"
 
 [provider]
 cluster = "Localnet"
